@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WagashiDB - The Sweetest Art of Japan</title>
+<meta name="description" content="A curated database of Japanese traditional sweets (wagashi) for international audiences. Explore 30+ wagashi types by season, anko style, and category.">
+<meta property="og:title" content="WagashiDB - The Sweetest Art of Japan">
+<meta property="og:description" content="A curated database of Japanese traditional sweets. Explore wagashi by season, anko style, and category.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://humancronadmin.github.io/wagashi-db/">
+<link rel="canonical" href="https://humancronadmin.github.io/wagashi-db/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav-brand">Wagashi<span>DB</span></a>
+  <div class="nav-links">
+    <a href="database.html">Database</a>
+    <a href="#guides">Guides</a>
+    <a href="#about">About</a>
+  </div>
+</nav>
+<section class="hero">
+  <h1>The Sweetest Art of <em>Japan</em>.</h1>
+  <p>Wagashi are edible art. A curated guide to Japanese traditional sweets for curious explorers who want to taste every season.</p>
+  <a href="database.html" class="btn btn-primary">Browse the Database</a>
+</section>
+<section class="section">
+  <h2 class="section-title">The Problem</h2>
+  <div class="problem-grid" id="problems"></div>
+</section>
+<section class="section" style="background:var(--dark);color:#FFF;max-width:none;padding:48px 16px">
+  <div class="stats-row" id="stats"></div>
+</section>
+<section class="section" style="text-align:center">
+  <h2 class="section-title">Ready to Explore Wagashi?</h2>
+  <p style="color:var(--muted);margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto">Filter by category, season, anko type, and sweetness. Every entry includes real descriptions, seasonal notes, and where to try them.</p>
+  <a href="database.html" class="btn btn-primary">Explore the Database</a>
+</section>
+<footer class="footer" id="about">
+  <p>WagashiDB is an open-source project. Helping the world discover Japanese sweets, one wagashi at a time.</p>
+  <p style="margin-top:8px"><a href="https://github.com/humancronadmin">GitHub</a></p>
+</footer>
+<script>
+const problems=[
+  {icon:"\uD83C\uDF61",title:"Names are confusing for newcomers",desc:"Daifuku, manju, monaka, nerikiri. Dozens of names with subtle differences that are hard to learn without a guide."},
+  {icon:"\uD83C\uDF38",title:"Seasonal wagashi are hard to track",desc:"The best wagashi change with the seasons. Miss cherry blossom season and sakura mochi is gone until next year."},
+  {icon:"\uD83C\uDFEF",title:"Real artisan shops vs tourist traps",desc:"Department store basements and century-old shops make the real deal. Knowing where to look makes all the difference."}
+];
+const stats=[
+  {num:"30+",label:"Wagashi Types"},
+  {num:"4",label:"Seasons Covered"},
+  {num:"From Anko to Yokan",label:"Full Spectrum"}
+];
+document.getElementById("problems").innerHTML=problems.map(p=>`<div class="problem-card"><div class="icon">${p.icon}</div><h3>${p.title}</h3><p>${p.desc}</p></div>`).join("");
+document.getElementById("stats").innerHTML=stats.map(s=>`<div class="stat"><div class="num">${s.num}</div><div class="label">${s.label}</div></div>`).join("");
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6776399834647681" crossorigin="anonymous"></script>
+</body>
+</html>
